@@ -2,8 +2,9 @@
     <string name="app_name">Name Generator</string>
     <string name="first_name">First Name</string>
     <string name="surname">Surname</string>
-    <string name="mother_s_maiden_name">Mother\'s Maiden Name</string>
+    <string name="mothers_maiden_name">Mother\'s Maiden Name</string>
     <string name="birthplace">Birthplace</string>
     <string name="favourite_band">Favourite Band</string>
     <string name="submit">Submit</string>
+    <string name="generated_text">Generated Text</string>
 </resources>

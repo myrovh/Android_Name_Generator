@@ -41,7 +41,7 @@
             android:id="@+id/insertMothersName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/mother_s_maiden_name" />
+            android:hint="@string/mothers_maiden_name" />
 
     </android.support.design.widget.TextInputLayout>
 
