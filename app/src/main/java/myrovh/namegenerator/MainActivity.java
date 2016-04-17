@@ -54,6 +54,10 @@ public class MainActivity extends AppCompatActivity {
             birthplaceText.setError("Must contain at least 3 characters");
             isValidInputs = false;
         }
+        if (band.length() < 1) {
+            birthplaceText.setError("Must contain at least 1 character");
+            isValidInputs = false;
+        }
         //endregion
 
         //Start view activity if no errors
