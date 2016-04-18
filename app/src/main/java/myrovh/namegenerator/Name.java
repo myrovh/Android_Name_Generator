@@ -43,12 +43,6 @@ public class Name implements Parcelable{
         String lastRule2 = Birthplace.substring(0, 3).toLowerCase();
         String planetRule1 = Surname.substring(Surname.length() - 2, Surname.length() - 1).toUpperCase() + Surname.substring(Surname.length() - 1).toLowerCase();
         String planetRule2 = FavoriteBand.toLowerCase();
-        Log.w("f1", firstRule1);
-        Log.w("f2", firstRule2);
-        Log.w("s1", lastRule1);
-        Log.w("s2", lastRule2);
-        Log.w("p1", planetRule1);
-        Log.w("p2", planetRule2);
         GeneratedName = firstRule1 + firstRule2 + " " + lastRule1 + lastRule2 + " of " + planetRule1 + planetRule2;
     }
 

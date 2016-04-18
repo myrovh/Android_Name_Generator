@@ -3,17 +3,18 @@ package myrovh.namegenerator;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TextInputEditText;
+import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
 
     //UI Properties
-    private TextInputEditText firstNameText;
-    private TextInputEditText surnameText;
-    private TextInputEditText motherNameText;
-    private TextInputEditText birthplaceText;
-    private TextInputEditText bandText;
+    private TextInputLayout firstNameLayout;
+    private TextInputLayout surnameLayout;
+    private TextInputLayout motherNameLayout;
+    private TextInputLayout birthplaceLayout;
+    private TextInputLayout bandLayout;
 
 
     @Override
@@ -22,41 +23,51 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //Get UI Variables
-        firstNameText = (TextInputEditText) findViewById(R.id.insertFirstName);
-        surnameText = (TextInputEditText) findViewById(R.id.insertSurname);
-        motherNameText = (TextInputEditText) findViewById(R.id.insertMothersName);
-        birthplaceText = (TextInputEditText) findViewById(R.id.insertBirthplace);
-        bandText = (TextInputEditText) findViewById(R.id.insertBand);
+        firstNameLayout = (TextInputLayout) findViewById(R.id.layoutFirstName);
+        surnameLayout = (TextInputLayout) findViewById(R.id.layoutSurname);
+        motherNameLayout = (TextInputLayout) findViewById(R.id.layoutMothersName);
+        birthplaceLayout = (TextInputLayout) findViewById(R.id.layoutBirthplace);
+        bandLayout = (TextInputLayout) findViewById(R.id.layoutBand);
     }
 
     public void SubmitButtonPressed(View v) {
-        String name = firstNameText.getText().toString();
-        String surname = surnameText.getText().toString();
-        String mother = motherNameText.getText().toString();
-        String place = birthplaceText.getText().toString();
-        String band = bandText.getText().toString();
+        String name = firstNameLayout.getEditText().getText().toString();
+        String surname = surnameLayout.getEditText().getText().toString();
+        String mother = motherNameLayout.getEditText().getText().toString();
+        String place = birthplaceLayout.getEditText().getText().toString();
+        String band = bandLayout.getEditText().getText().toString();
         boolean isValidInputs = true;
 
         //region Input Validation
         if (name.length() < 3) {
-            firstNameText.setError("Must contain at least 3 characters");
+            firstNameLayout.setError("Must contain at least 3 characters");
             isValidInputs = false;
+        } else {
+            firstNameLayout.setError(null);
         }
         if (surname.length() < 2) {
-            surnameText.setError("Must contain at least 2 characters");
+            surnameLayout.setError("Must contain at least 2 characters");
             isValidInputs = false;
+        } else {
+            surnameLayout.setError(null);
         }
         if (mother.length() < 2) {
-            motherNameText.setError("Must contain at least 2 characters");
+            motherNameLayout.setError("Must contain at least 2 characters");
             isValidInputs = false;
+        } else {
+            motherNameLayout.setError(null);
         }
         if (place.length() < 3) {
-            birthplaceText.setError("Must contain at least 3 characters");
+            birthplaceLayout.setError("Must contain at least 3 characters");
             isValidInputs = false;
+        } else {
+            birthplaceLayout.setError(null);
         }
         if (band.length() < 1) {
-            birthplaceText.setError("Must contain at least 1 character");
+            bandLayout.setError("Must contain at least 1 character");
             isValidInputs = false;
+        } else {
+            bandLayout.setError(null);
         }
         //endregion
 
